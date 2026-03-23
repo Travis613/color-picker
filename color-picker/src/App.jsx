@@ -1,4 +1,5 @@
 import { ColorButton } from "./components/ColorButton";
+import { ColorContainer } from "./components/ColorContainer";
 
 function App() {
   const colors = ["blue", "green", "red", "random"];
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+      <ColorContainer />
       <div>{listItems}</div>
     </>
   );
