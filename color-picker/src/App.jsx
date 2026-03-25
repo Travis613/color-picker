@@ -1,19 +1,7 @@
-import { ColorButton } from "./components/ColorButton";
-import { ColorContainer } from "./components/ColorContainer";
+import { ColorPicker } from "./components/ColorPicker";
 
 function App() {
-  const colors = ["blue", "green", "red", "random"];
-
-  const listItems = colors.map((color) => (
-    <ColorButton color={color}></ColorButton>
-  ));
-
-  return (
-    <>
-      <ColorContainer />
-      <div>{listItems}</div>
-    </>
-  );
+  return <ColorPicker />;
 }
 
 export default App;
