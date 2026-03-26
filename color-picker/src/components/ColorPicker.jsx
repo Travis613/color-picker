@@ -3,9 +3,12 @@ import { useState } from "react";
 export function ColorPicker() {
   let [color, setColor] = useState("white");
 
-  const colors = ["blue", "green", "red"];
+  const colors = ["blue", "green", "red", "purple", "orange", "black"];
 
-  const listItems = colors.map((color) => <button>{color}</button>);
+  function handleClicks() {
+    const randomColor = Math.floor(Math.random() * colors.length);
+    setColor(colors[randomColor]);
+  }
 
   return (
     <>
@@ -14,10 +17,10 @@ export function ColorPicker() {
           height: "500px",
           width: "500px",
           borderStyle: "solid",
-          backgroundColor: { color },
+          backgroundColor: color,
         }}
       ></div>
-      <div>{listItems}</div>
+      <button onClick={handleClicks}>Click Me!</button>
     </>
   );
 }
